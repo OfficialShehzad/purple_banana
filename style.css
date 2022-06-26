@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    user-select: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    position: relative;
+}
+
+#banana-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: rgba(255, 255, 0, 0.5);
+}
+
+svg{
+    width: 50vw;
+    max-height: 50vh;
+    opacity: 1;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(128, 0, 128, .5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.purple-banana{
+    fill: rgb(128, 0, 128);
+    height: 20vh;
+}
+
+.you-win, .score {
+    color: rgb(128, 0, 128);
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.btn {
+    text-decoration: none;
+    font-size: 1.15rem;
+    font-weight: bold;
+    color: rgb(128, 0, 128);
+    border: 2px solid rgb(128, 0, 128);
+    border-radius: 8px;
+    padding: 10px 30px;
+}
+
+.btn:hover {
+    background-color: rgb(128, 0, 128);
+    border-color: transparent;
+    color: #fff;
+}
+
+.close:hover {
+    border-color: transparent;
+}
+
+.how-to-play {
+    font-size: 5vw;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    border-radius: 50%;
+    transition: all 500ms ease-in-out;
+}
+
+.how-to-play:hover {
+    box-shadow: 5px 5px 10px rgb(49, 49, 49);
+}
+
+.how-to-play-modal::backdrop {
+    background-color: rgba(0, 0, 0, 0.664);
+}
+
+dialog{
+    text-align: center;
+    padding: 2rem;
+    margin: 30vh auto;
+    border: none;
+    position: initial;
+    border-radius: 5px;
+}
+
+dialog > p {
+    margin: 1rem 0;
+}
