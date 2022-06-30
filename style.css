@@ -25,6 +25,7 @@ svg{
     width: 50vw;
     max-height: 50vh;
     opacity: 1;
+    transform: rotate(-5deg);
 }
 
 .container {
@@ -97,4 +98,16 @@ dialog{
 
 dialog > p {
     margin: 1rem 0;
+}
+
+.banana-animation {
+    animation: banana-shake 500ms ease-in-out;
+}
+
+@keyframes banana-shake {
+    /* 0% {transform: rotate(0deg);} */
+    25% {transform: rotate(.5deg);}
+    50% {transform: rotate(-.5deg);}
+    75% {transform: rotate(.5deg);}
+    100% {transform: rotate(-.5deg);}
 }

@@ -257,6 +257,10 @@ var backgroundColors = [
 var bananaContainer = document.getElementById("banana-container")
 var banana = document.querySelector("svg")
 
+var getRandomNumber = () => {
+    return  Math.ceil(Math.random() * colors.length)
+}
+
 // var score = 0;
 // var scoreDisplay = document.querySelector(".score")
 
@@ -269,9 +273,11 @@ document.addEventListener("click", (e) => {
 
     // score++
 
-    getRandomNumber = () => {
-        return  Math.ceil(Math.random() * colors.length)
-    }
+    banana.classList.add('banana-animation')
+    setTimeout(() => {
+        banana.classList.remove('banana-animation')
+    }, 750);
+
 
     var randomNumber = getRandomNumber()
     var bananaColor = colors[randomNumber]
